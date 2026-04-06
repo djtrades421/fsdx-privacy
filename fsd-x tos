@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FSD-X ORB PRO — Terms of Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0a0a0c;
+      --surface: #111114;
+      --border: #1e1e24;
+      --accent: #e8383d;
+      --accent-dim: rgba(232, 56, 61, 0.12);
+      --text: #e8e8ee;
+      --muted: #6b6b7a;
+      --heading: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* Subtle grid background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(232,56,61,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232,56,61,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 80px 32px 120px;
+    }
+
+    /* Header */
+    header {
+      margin-bottom: 64px;
+      border-left: 3px solid var(--accent);
+      padding-left: 24px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .brand {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 800;
+      color: var(--heading);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .meta {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    .intro {
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 600px;
+      line-height: 1.9;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 48px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .section:nth-child(2) { animation-delay: 0.05s; }
+    .section:nth-child(3) { animation-delay: 0.10s; }
+    .section:nth-child(4) { animation-delay: 0.15s; }
+    .section:nth-child(5) { animation-delay: 0.20s; }
+    .section:nth-child(6) { animation-delay: 0.25s; }
+    .section:nth-child(7) { animation-delay: 0.30s; }
+    .section:nth-child(8) { animation-delay: 0.35s; }
+    .section:nth-child(9) { animation-delay: 0.40s; }
+    .section:nth-child(10) { animation-delay: 0.45s; }
+    .section:nth-child(11) { animation-delay: 0.50s; }
+
+    .section-inner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 32px 36px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s ease;
+    }
+
+    .section-inner:hover {
+      border-color: rgba(232,56,61,0.3);
+    }
+
+    .section-inner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--accent);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .section-inner:hover::before {
+      opacity: 1;
+    }
+
+    .section-number {
+      font-family: 'Syne', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--heading);
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      color: var(--text);
+      margin-bottom: 12px;
+      font-size: 13.5px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      margin: 12px 0;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      font-size: 13.5px;
+      color: var(--text);
+    }
+
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Warning section highlight */
+    .section-inner.highlight {
+      background: var(--accent-dim);
+      border-color: rgba(232,56,61,0.25);
+    }
+
+    .section-inner.highlight::before {
+      opacity: 1;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      animation: fadeUp 0.6s 0.55s ease both;
+    }
+
+    .footer-brand {
+      font-family: 'Syne', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: 0.05em;
+    }
+
+    .footer-meta {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .wrapper { padding: 48px 20px 80px; }
+      .section-inner { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <header>
+      <div class="brand">FSD-X ORB PRO</div>
+      <h1>Terms of Service</h1>
+      <div class="meta">Last Updated: January 2026</div>
+      <p class="intro">By accessing, subscribing to, or using FSD-X ORB PRO ("the Indicator," "the Service"), you acknowledge that you have read, understood, and agreed to the following Terms of Service.</p>
+    </header>
+
+    <div class="section">
+      <div class="section-inner">
+        <div class="section-number">Section 01</div>
+        <h2>Educational Use Only</h2>
+        <p>FSD-X ORB PRO is a discretionary, rules-based trading framework and analytical indicator designed to support decision-making around Opening Range Breakout (ORB) trading.</p>
+        <ul>
+          <li>The indicator does not provide trade signals</li>
+          <li>The indicator is not financial advice</li>
+          <li>No content provided should be interpreted as a recommendation to buy or sell any financial instrument</li>
+        </ul>
+        <p>You are solely responsible for your trading decisions, risk management, and execution.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-inner">
+        <div class="section-number">Section 02</div>
+        <h2>Risk Disclosure & No Guarantees</h2>
+        <p>Trading involves substantial risk and may result in partial or total loss of capital.</p>
+        <ul>
+          <li>Past performance does not guarantee future results</li>
+          <li>Market conditions, execution, slippage, and risk management materially impact outcomes</li>
+          <li>No guarantees of profitability or performance are made or implied</li>
+        </ul>
+        <p>Use the indicator only with capital you can afford to lose.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-inner highlight">
+        <div class="section-number">Section 03</div>
+        <h2>Access & Account Limitations</h2>
+        <p>Access to FSD-X ORB PRO is granted manually and is limited to:</p>
+        <ul>
+          <li>One Discord account per user</li>
+          <li>One TradingView username per user</li>
+        </ul>
+        <p>Sharing, reselling, transferring, duplicating, or redistributing access is strictly prohibited and may result in immediate termination without refund.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-inner highlight">
+        <div class="section-number">Section 04</div>
+        <h2>Trial Access & Abuse Policy</h2>
+        <p>Free trials, when offered, are limited to one trial per individual.</p>
+        <p>The use of multiple accounts, identities, Discord accounts, TradingView usernames, or any method intended to extend, repeat, or bypass trial limitations is prohibited and may result in immediate termination of access.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-inner">
+        <div class="section-number">Section 05</div>
+        <h2>Billing, Refunds & Cancellations</h2>
+        <ul>
+          <li>Subscriptions may include a free trial period where applicable</li>
+          <li>Users may cancel at any time during the trial to avoid being charged</li>
+          <li>Once a billing cycle begins, all fees are non-refundable</li>
+        </ul>
+        <p>Charges are for access to tools and resources, not trading outcomes or results.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-inner">
+        <div class="section-number">Section 06</div>
+        <h2>Pricing Changes & Grandfathering</h2>
+        <p>FSD-X reserves the right to modify pricing, trial availability, features, or subscription terms for new members at any time.</p>
+        <p>Existing subscribers may retain their current pricing at FSD-X's discretion. Grandfathered pricing is not guaranteed and may be revoked if:</p>
+        <ul>
+          <li>Terms are violated</li>
+          <li>Access is abused</li>
+          <li>Accounts are shared or misused</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-inner">
+        <div class="section-number">Section 07</div>
+        <h2>Lifetime Access (If Offered)</h2>
+        <p>Lifetime access, if offered, applies only to:</p>
+        <ul>
+          <li>The original purchasing Discord account</li>
+          <li>The associated TradingView username</li>
+        </ul>
+        <p>Lifetime access does not guarantee perpetual updates, features, or support and may be modified or revoked if access terms are violated.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-inner">
+        <div class="section-number">Section 08</div>
+        <h2>Termination of Access</h2>
+        <p>FSD-X reserves the right to suspend or terminate access at any time for:</p>
+        <ul>
+          <li>Violations of these Terms</li>
+          <li>Abuse of trials or pricing</li>
+          <li>Account sharing or misuse</li>
+        </ul>
+        <p>Termination may occur without refund.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-inner">
+        <div class="section-number">Section 09</div>
+        <h2>Limitation of Liability</h2>
+        <p>FSD-X, its operators, and affiliates shall not be held liable for:</p>
+        <ul>
+          <li>Trading losses</li>
+          <li>Missed opportunities</li>
+          <li>Technical issues or platform outages</li>
+          <li>Misuse or misinterpretation of the indicator</li>
+        </ul>
+        <p>Use of the Service is entirely at your own risk.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-inner">
+        <div class="section-number">Section 10</div>
+        <h2>Acceptance of Terms</h2>
+        <p>By subscribing, accessing, or using FSD-X ORB PRO, you confirm that you:</p>
+        <ul>
+          <li>Understand this is not a signal service</li>
+          <li>Accept full responsibility for your trading</li>
+          <li>Agree to all terms outlined above</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-brand">FSD-X ORB PRO</div>
+      <div class="footer-meta">© 2026 FSD-X. All rights reserved.</div>
+    </footer>
+
+  </div>
+</body>
+</html>
