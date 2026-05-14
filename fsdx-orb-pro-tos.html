@@ -28,7 +28,6 @@
       min-height: 100vh;
     }
 
-    /* Subtle grid background */
     body::before {
       content: '';
       position: fixed;
@@ -49,7 +48,6 @@
       padding: 80px 32px 120px;
     }
 
-    /* Header */
     header {
       margin-bottom: 64px;
       border-left: 3px solid var(--accent);
@@ -93,7 +91,6 @@
       padding-top: 20px;
     }
 
-    /* Sections */
     .section {
       margin-bottom: 48px;
       animation: fadeUp 0.6s ease both;
@@ -109,6 +106,8 @@
     .section:nth-child(9) { animation-delay: 0.40s; }
     .section:nth-child(10) { animation-delay: 0.45s; }
     .section:nth-child(11) { animation-delay: 0.50s; }
+    .section:nth-child(12) { animation-delay: 0.55s; }
+    .section:nth-child(13) { animation-delay: 0.60s; }
 
     .section-inner {
       background: var(--surface);
@@ -150,6 +149,23 @@
       opacity: 0.8;
     }
 
+    .compliance-badge {
+      display: inline-block;
+      font-family: 'Syne', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(232,56,61,0.4);
+      border-radius: 2px;
+      padding: 2px 8px;
+      margin-bottom: 10px;
+      margin-left: 8px;
+      vertical-align: middle;
+      opacity: 0.9;
+    }
+
     h2 {
       font-family: 'Syne', sans-serif;
       font-size: 17px;
@@ -188,7 +204,6 @@
       font-weight: 500;
     }
 
-    /* Warning section highlight */
     .section-inner.highlight {
       background: var(--accent-dim);
       border-color: rgba(232,56,61,0.25);
@@ -198,7 +213,6 @@
       opacity: 1;
     }
 
-    /* Footer */
     footer {
       margin-top: 80px;
       padding-top: 32px;
@@ -208,7 +222,7 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 12px;
-      animation: fadeUp 0.6s 0.55s ease both;
+      animation: fadeUp 0.6s 0.65s ease both;
     }
 
     .footer-brand {
@@ -242,7 +256,7 @@
     <header>
       <div class="brand">FSD-X ORB PRO</div>
       <h1>Terms of Service</h1>
-      <div class="meta">Last Updated: January 2026</div>
+      <div class="meta">Last Updated: May 2026</div>
       <p class="intro">By accessing, subscribing to, or using FSD-X ORB PRO ("the Indicator," "the Service"), you acknowledge that you have read, understood, and agreed to the following Terms of Service.</p>
     </header>
 
@@ -375,6 +389,37 @@
           <li>Accept full responsibility for your trading</li>
           <li>Agree to all terms outlined above</li>
         </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-inner">
+        <div class="section-number">Section 11 <span class="compliance-badge">NinjaTrader Compliance</span></div>
+        <h2>Futures Trading Risk Disclosure</h2>
+        <p>CFTC REQUIRED DISCLOSURE: Trading futures involves substantial risk of loss and is not appropriate for all investors. Past performance is not necessarily indicative of future results. The risk of loss in futures trading can be substantial. Only risk capital should be used for trading and only those with sufficient risk capital should consider trading futures.</p>
+        <ul>
+          <li>Futures trading contains substantial risk and is not for every investor</li>
+          <li>An investor could potentially lose all or more than the initial investment</li>
+          <li>Risk capital is money that can be lost without jeopardizing one's financial security or lifestyle</li>
+          <li>Past performance is not necessarily indicative of future results</li>
+          <li>Only risk capital should be used for trading</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-inner">
+        <div class="section-number">Section 12 <span class="compliance-badge">NinjaTrader Compliance</span></div>
+        <h2>Affiliate & Vendor Disclosure</h2>
+        <p>FSD-X Trading participates in affiliate and vendor programs with third-party trading platforms and services, including as an official NinjaTrader vendor.</p>
+        <ul>
+          <li>Links shared by FSD-X Trading may be affiliate or vendor links</li>
+          <li>FSD-X Trading may earn a commission if you click a link and make a purchase</li>
+          <li>This comes at no additional cost to you</li>
+          <li>Affiliate relationships do not influence our recommendations — we only partner with platforms we believe provide value to our community</li>
+          <li>NinjaTrader® is a registered trademark of NinjaTrader Group, LLC</li>
+        </ul>
+        <p>For questions about our affiliate partnerships, contact us through our official community channels.</p>
       </div>
     </div>
 
